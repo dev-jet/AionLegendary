@@ -1,0 +1,2 @@
+# AionLegendaryLauncher
+ AionLegendary

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AionLegendaryLauncher", "AionLegendaryLauncher.csproj", "{517B411B-9E7D-4778-87A1-29CEDAB6334E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517B411B-9E7D-4778-87A1-29CEDAB6334E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517B411B-9E7D-4778-87A1-29CEDAB6334E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517B411B-9E7D-4778-87A1-29CEDAB6334E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517B411B-9E7D-4778-87A1-29CEDAB6334E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9763C249-7A90-4507-8160-6625152803DD}
+	EndGlobalSection
+EndGlobal
