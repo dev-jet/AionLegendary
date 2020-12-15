@@ -1,5 +1,4 @@
-﻿
-namespace AionLegendaryLauncher
+﻿namespace AionLegendaryLauncher
 {
     partial class Main
     {
@@ -39,12 +38,12 @@ namespace AionLegendaryLauncher
             this.btn_Discord = new System.Windows.Forms.Button();
             this.btn_Youtube = new System.Windows.Forms.Button();
             this.btn_Instagram = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.btn_Website = new System.Windows.Forms.Button();
             this.btn_Register = new System.Windows.Forms.Button();
             this.btn_Shop = new System.Windows.Forms.Button();
             this.btn_ForgotPassword = new System.Windows.Forms.Button();
             this.btn_Facebook = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // btn_Minimize
@@ -199,7 +198,7 @@ namespace AionLegendaryLauncher
             this.btn_Discord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Discord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Discord.Location = new System.Drawing.Point(287, 39);
+            this.btn_Discord.Location = new System.Drawing.Point(307, 39);
             this.btn_Discord.MaximumSize = new System.Drawing.Size(32, 32);
             this.btn_Discord.MinimumSize = new System.Drawing.Size(32, 32);
             this.btn_Discord.Name = "btn_Discord";
@@ -222,7 +221,7 @@ namespace AionLegendaryLauncher
             this.btn_Youtube.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Youtube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Youtube.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Youtube.Location = new System.Drawing.Point(325, 39);
+            this.btn_Youtube.Location = new System.Drawing.Point(345, 39);
             this.btn_Youtube.MaximumSize = new System.Drawing.Size(32, 32);
             this.btn_Youtube.MinimumSize = new System.Drawing.Size(32, 32);
             this.btn_Youtube.Name = "btn_Youtube";
@@ -245,7 +244,7 @@ namespace AionLegendaryLauncher
             this.btn_Instagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Instagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Instagram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Instagram.Location = new System.Drawing.Point(363, 39);
+            this.btn_Instagram.Location = new System.Drawing.Point(383, 39);
             this.btn_Instagram.MaximumSize = new System.Drawing.Size(32, 32);
             this.btn_Instagram.MinimumSize = new System.Drawing.Size(32, 32);
             this.btn_Instagram.Name = "btn_Instagram";
@@ -253,19 +252,6 @@ namespace AionLegendaryLauncher
             this.btn_Instagram.TabIndex = 18;
             this.btn_Instagram.UseVisualStyleBackColor = false;
             this.btn_Instagram.Click += new System.EventHandler(this.btn_Instagram_Click);
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(33, 77);
-            this.webBrowser1.MaximumSize = new System.Drawing.Size(400, 300);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(400, 300);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(400, 300);
-            this.webBrowser1.TabIndex = 19;
             // 
             // btn_Website
             // 
@@ -377,7 +363,7 @@ namespace AionLegendaryLauncher
             this.btn_Facebook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Facebook.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Facebook.Location = new System.Drawing.Point(401, 39);
+            this.btn_Facebook.Location = new System.Drawing.Point(421, 39);
             this.btn_Facebook.MaximumSize = new System.Drawing.Size(32, 32);
             this.btn_Facebook.MinimumSize = new System.Drawing.Size(32, 32);
             this.btn_Facebook.Name = "btn_Facebook";
@@ -385,6 +371,19 @@ namespace AionLegendaryLauncher
             this.btn_Facebook.TabIndex = 24;
             this.btn_Facebook.UseVisualStyleBackColor = false;
             this.btn_Facebook.Click += new System.EventHandler(this.btn_Facebook_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(33, 77);
+            this.webBrowser1.MaximumSize = new System.Drawing.Size(420, 300);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(420, 300);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(420, 300);
+            this.webBrowser1.TabIndex = 25;
             // 
             // Main
             // 
@@ -395,12 +394,12 @@ namespace AionLegendaryLauncher
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(816, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btn_Facebook);
             this.Controls.Add(this.btn_ForgotPassword);
             this.Controls.Add(this.btn_Shop);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.btn_Website);
-            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btn_Instagram);
             this.Controls.Add(this.btn_Youtube);
             this.Controls.Add(this.btn_Discord);
@@ -442,12 +441,12 @@ namespace AionLegendaryLauncher
         private System.Windows.Forms.Button btn_Discord;
         private System.Windows.Forms.Button btn_Youtube;
         private System.Windows.Forms.Button btn_Instagram;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button btn_Website;
         private System.Windows.Forms.Button btn_Register;
         private System.Windows.Forms.Button btn_Shop;
         private System.Windows.Forms.Button btn_ForgotPassword;
         private System.Windows.Forms.Button btn_Facebook;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

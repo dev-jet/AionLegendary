@@ -3,7 +3,6 @@ using AionLegendaryLauncher.Source;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -34,6 +33,7 @@ namespace AionLegendaryLauncher
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default._UILang);
             webBrowser1.Navigate(Globals.iframeLink);
             LoadToolTip();
+            LauncherVersionChecker.UpdateLauncher();
         }
 
         private void Main_MouseDown(object sender, MouseEventArgs e)
@@ -65,8 +65,9 @@ namespace AionLegendaryLauncher
 
         private void CancelUpdate()
         {
-            if(FileDownloader.webClient != null){
-               FileDownloader.webClient.CancelAsync();
+            if (FileDownloader.webClient != null)
+            {
+                FileDownloader.webClient.CancelAsync();
             }
         }
 
@@ -87,7 +88,7 @@ namespace AionLegendaryLauncher
                 st.Show();
                 IsOpenSetting = true;
                 this.Enabled = false;
-                
+
             }
         }
 

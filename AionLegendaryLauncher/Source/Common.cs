@@ -36,24 +36,6 @@ namespace AionLegendaryLauncher.Source
             }
             Globals.mainForm.downloadSpeedText.Text = Texts.GetText("DOWNLOADSPEED", Speed.ToString("0.00"));
         }
-
-        public static string CalculateMD5String(string file)
-        {
-            byte[] temp = Encoding.UTF8.GetBytes(file);
-            var sha = new MD5CryptoServiceProvider();
-            byte[] checksum = sha.ComputeHash(temp);
-            return BitConverter.ToString(checksum).Replace("-", String.Empty);
-        }
-        public static string CalculateMD5StringFile(string file)
-        {
-            using (FileStream stream = File.OpenRead(file))
-            {
-                byte[] temp = Encoding.UTF8.GetBytes(stream.Length.ToString());
-                var sha = new MD5CryptoServiceProvider();
-                byte[] checksum = sha.ComputeHash(temp);
-                return BitConverter.ToString(checksum).Replace("-", String.Empty);
-            }
-        }
         public static string CalculateMD5(string file)
         {
             using (FileStream stream = File.OpenRead(file))
@@ -113,7 +95,6 @@ namespace AionLegendaryLauncher.Source
         }
         public static void EnableStart()
         {
-            Globals.mainForm.UnLockedButtons();
             Globals.PlayAion();
         }
     }

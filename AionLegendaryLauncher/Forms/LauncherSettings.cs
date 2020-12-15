@@ -11,7 +11,7 @@ namespace AionLegendaryLauncher.Forms
         bool move = false;
         int moveX = 0;
         int moveY = 0;
-        private static string path = Properties.Settings.Default._Path;
+        private static string path = Properties.Settings.Default._Path.Replace(" ", String.Empty);
         private static int gametype = Properties.Settings.Default._GameType;
         private static string gamelang = Properties.Settings.Default._GameLang;
         private static string uilang = Properties.Settings.Default._UILang;
@@ -66,11 +66,11 @@ namespace AionLegendaryLauncher.Forms
 
         private void LauncherSettings_Load(object sender, EventArgs e)
         {
-            path = Properties.Settings.Default._Path;
+            path = Properties.Settings.Default._Path.Replace(" ", String.Empty);
             gametype = Properties.Settings.Default._GameType;
             gamelang = Properties.Settings.Default._GameLang;
             uilang = Properties.Settings.Default._UILang;
-            labelGamePathShow.Text = Properties.Settings.Default._Path;
+            labelGamePathShow.Text = Properties.Settings.Default._Path.Replace(" ", String.Empty);
             radioButton32.Checked = Properties.Settings.Default._GameType == 32 ? true : false;
             radioButton64.Checked = Properties.Settings.Default._GameType == 64 ? true : false;
             radioButtonTRK.Checked = Properties.Settings.Default._GameLang == "trk" ? true : false;
@@ -164,7 +164,7 @@ namespace AionLegendaryLauncher.Forms
 
         public static void SaveSettings()
         {
-            Properties.Settings.Default._Path = path;
+            Properties.Settings.Default._Path = path.Replace(" ", String.Empty);
             Properties.Settings.Default._GameType = gametype;
             Properties.Settings.Default._GameLang = gamelang;
             Properties.Settings.Default._UILang = uilang;

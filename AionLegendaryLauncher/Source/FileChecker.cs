@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
@@ -40,7 +41,7 @@ namespace AionLegendaryLauncher.Source
             foreach (Globals.FileHash file in Globals.Files)
             {
                 Globals.fullSize += file.Size;
-                string fl = Path.Combine(Properties.Settings.Default._Path, file.Name);
+                string fl = Path.Combine(Properties.Settings.Default._Path, file.Name).Replace(" ", String.Empty);
                 FullCheckFile.ReportProgress((int)State.REPORT_NAME, Path.GetFileName(fl));
                 if (!File.Exists(fl) || Common.CalculateMD5(fl) != file.Hash || Common.CalculateFileSize(fl) != file.Size)
                 {
@@ -93,9 +94,9 @@ namespace AionLegendaryLauncher.Source
             foreach (Globals.FileHash file in Globals.Files)
             {
                 Globals.fullSize += file.Size;
-                string fl = Path.Combine(Properties.Settings.Default._Path, file.Name);
+                string fl = Path.Combine(Properties.Settings.Default._Path, file.Name).Replace(" ", String.Empty);
                 FastCheckFile.ReportProgress((int)State.REPORT_NAME, Path.GetFileName(fl));
-                if (!File.Exists(fl) || Common.CalculateMD5StringFile(fl) != Common.CalculateMD5String(file.Size.ToString()))
+                if (!File.Exists(fl) || Common.CalculateFileSize(fl) != file.Size)
                 {
                     Globals.OldFiles.Add(file.Name);
                 }

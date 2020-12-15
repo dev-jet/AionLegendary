@@ -33,7 +33,7 @@ namespace AionLegendaryLauncher.Source
 
                 return;
             }
-            string fl = Path.Combine(Properties.Settings.Default._Path, Path.GetDirectoryName(Globals.OldFiles[curFile]));
+            string fl = Path.Combine(Properties.Settings.Default._Path, Path.GetDirectoryName(Globals.OldFiles[curFile])).Replace(" ", String.Empty);
 
             if (Globals.OldFiles[curFile].Contains("/"))
             {
@@ -50,7 +50,7 @@ namespace AionLegendaryLauncher.Source
             webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(webClient_DownloadFileCompleted);
 
             stopWatch.Start();
-            string df = Path.Combine(Properties.Settings.Default._Path, Globals.OldFiles[curFile]);
+            string df = Path.Combine(Properties.Settings.Default._Path, Globals.OldFiles[curFile]).Replace(" ", String.Empty);
             webClient.DownloadFileAsync(new Uri(Globals.ServerURL + Globals.OldFiles[curFile]), df);
         }
 

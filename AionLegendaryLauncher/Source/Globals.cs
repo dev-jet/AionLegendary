@@ -9,12 +9,12 @@ namespace AionLegendaryLauncher.Source
 {
     public class Globals
     {
-        public static string ServerURL = "http://185.207.38.51/AionLegendary/";
-        public static string iframeLink = "http://185.207.38.51/";
-        public static string FullCheckList = "FullCheckList.txt";
-        public static string VersionList = "Version.txt";
-        public static string VersionKey = "e4c2e8edac362acab7123654b9e73432";
-        public static string programFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+        public static readonly string ServerURL = "http://185.207.38.51/AionLegendary/";
+        public static readonly string iframeLink = "https://www.aionlegendary.com/";
+        public static readonly string FullCheckList = "FullCheckList.txt";
+        public static readonly string LauncherList = "Launcher.txt";
+        public static readonly string Launcher = "AionLegendary.exe";
+        public static readonly string Updater = "Updater.exe";
         private static bool IsStarting = false;
         public static Main mainForm;
 
@@ -47,7 +47,7 @@ namespace AionLegendaryLauncher.Source
                 MessageBox.Show(Texts.GetText("UNKNOWNERROR", "FileInfo.txt cannot be read"));
                 Application.Exit();
             }
-            
+
         }
         public static long Compute(long Size)
         {
@@ -108,8 +108,7 @@ namespace AionLegendaryLauncher.Source
                     return;
                 }
                 IsStarting = true;
-                mainForm.LockedButtons();
-                string file_name = Path.Combine(Properties.Settings.Default._Path, FileName());
+                string file_name = Path.Combine(Properties.Settings.Default._Path, FileName()).Replace(" ", String.Empty);
                 if (File.Exists(file_name))
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo("cmd.exe");

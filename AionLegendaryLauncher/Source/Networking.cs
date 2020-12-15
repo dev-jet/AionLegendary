@@ -56,7 +56,7 @@ namespace AionLegendaryLauncher.Source
             }
             else
             {
-                LauncherVersionChecker.CheckVersion();
+                ListDownloader.DownloadList();
             }
         }
     }
