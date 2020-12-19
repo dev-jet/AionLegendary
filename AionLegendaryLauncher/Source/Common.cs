@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 
 namespace AionLegendaryLauncher.Source
@@ -21,7 +19,7 @@ namespace AionLegendaryLauncher.Source
         public static void UpdateCompleteProgress(long Value)
         {
             if (Value < 0 || Value > 100)
-            {    
+            {
                 return;
             }
             Globals.mainForm.progressBar.Value = Convert.ToInt32(Value);

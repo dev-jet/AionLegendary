@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
+﻿using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AionLegendaryLauncher.Source
@@ -52,12 +46,12 @@ namespace AionLegendaryLauncher.Source
                     Globals.AddFile(streamReader.ReadLine());
                 }
             }
-            catch(WebException ex)
+            catch (WebException ex)
             {
                 MessageBox.Show(ex.ToString());
                 Application.Exit();
             }
-            
+
         }
 
         private static void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -66,9 +60,9 @@ namespace AionLegendaryLauncher.Source
             {
                 FileChecker.FastCheckFiles();
             }
-            else 
+            else
             {
-                FileChecker.FullCheckFiles(); 
+                FileChecker.FullCheckFiles();
             }
         }
     }

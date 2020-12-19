@@ -95,6 +95,7 @@
             this.btn_Play.BackgroundImage = global::AionLegendaryLauncher.Properties.Resources.play;
             this.btn_Play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Play.Enabled = false;
             this.btn_Play.FlatAppearance.BorderSize = 0;
             this.btn_Play.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Play.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -171,6 +172,7 @@
             this.btn_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Settings.CausesValidation = false;
             this.btn_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Settings.Enabled = false;
             this.btn_Settings.FlatAppearance.BorderSize = 0;
             this.btn_Settings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Settings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -381,6 +383,7 @@
             this.webBrowser1.MaximumSize = new System.Drawing.Size(420, 300);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(420, 300);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(420, 300);
             this.webBrowser1.TabIndex = 25;
@@ -411,6 +414,7 @@
             this.Controls.Add(this.downloadSpeedText);
             this.Controls.Add(this.btn_Minimize);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = global::AionLegendaryLauncher.Properties.Resources.logo;
@@ -437,7 +441,6 @@
         public System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button btn_Exit;
         public System.Windows.Forms.Label Status;
-        private System.Windows.Forms.Button btn_Settings;
         private System.Windows.Forms.Button btn_Discord;
         private System.Windows.Forms.Button btn_Youtube;
         private System.Windows.Forms.Button btn_Instagram;
@@ -447,6 +450,7 @@
         private System.Windows.Forms.Button btn_ForgotPassword;
         private System.Windows.Forms.Button btn_Facebook;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        public System.Windows.Forms.Button btn_Settings;
     }
 }
 

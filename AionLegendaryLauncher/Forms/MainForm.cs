@@ -33,6 +33,7 @@ namespace AionLegendaryLauncher
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default._UILang);
             webBrowser1.Navigate(Globals.iframeLink);
             LoadToolTip();
+            WebBrowserHelper.FixBrowserVersion();
             LauncherVersionChecker.UpdateLauncher();
         }
 

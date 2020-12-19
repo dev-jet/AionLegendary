@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -105,7 +104,7 @@ namespace AionLegendaryLauncher.Source
                     Globals.completeSize += file.Size;
                     FastCheckFile.ReportProgress((int)State.REPORT_PROGRESS);
                 }
-                
+
             }
         }
         private static void FastCheckFile_ProgressChanged(object sender, ProgressChangedEventArgs e)

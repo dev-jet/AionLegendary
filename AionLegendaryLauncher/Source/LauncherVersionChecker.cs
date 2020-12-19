@@ -68,8 +68,13 @@ namespace AionLegendaryLauncher.Source
                 {
                     DownLoadUpdater();
                 }
+                else
+                {
+                    Globals.mainForm.btn_Play.Enabled = true;
+                    Globals.mainForm.btn_Settings.Enabled = true;
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Application.Exit();
@@ -109,7 +114,7 @@ namespace AionLegendaryLauncher.Source
                     Application.Exit();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Application.Exit();

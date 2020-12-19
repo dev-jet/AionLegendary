@@ -10,7 +10,7 @@ namespace AionLegendaryLauncher.Source
     public class Globals
     {
         public static readonly string ServerURL = "http://185.207.38.51/AionLegendary/";
-        public static readonly string iframeLink = "https://www.aionlegendary.com/";
+        public static readonly string iframeLink = "http://185.207.38.51/";
         public static readonly string FullCheckList = "FullCheckList.txt";
         public static readonly string LauncherList = "Launcher.txt";
         public static readonly string Launcher = "AionLegendary.exe";
