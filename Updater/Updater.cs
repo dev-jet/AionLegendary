@@ -108,7 +108,7 @@ namespace Updater
 
         public static void UpdateStatus(double Speed)
         {
-            Main.labelStatus.Text = Speed.ToString("0.00") + "Mb/s";
+            Main.labelStatus.Text = "File Downloading... " + Speed.ToString("0.00") + "Mb/s";
         }
 
     }

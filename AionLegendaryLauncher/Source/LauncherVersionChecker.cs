@@ -30,6 +30,7 @@ namespace AionLegendaryLauncher.Source
             else
             {
                 updateLaucnher.RunWorkerAsync();
+                Common.ChangeStatus("LAUNCHER_VERSION_CHECK");
             }
         }
         private static void updateLaucnher_DoWork(object sender, DoWorkEventArgs e)
@@ -72,6 +73,7 @@ namespace AionLegendaryLauncher.Source
                 {
                     Globals.mainForm.btn_Play.Enabled = true;
                     Globals.mainForm.btn_Settings.Enabled = true;
+                    Globals.mainForm.Status.Visible = false;
                 }
             }
             catch (Exception ex)

@@ -35,6 +35,7 @@ namespace AionLegendaryLauncher.Source
             {"UPDATE_CANCELING",                "Güncelleme iptal ediliyor."},
             {"FULL_FILE_CHECK",                 "Tam Dosya Konrolü"},
             {"LAUNCHER_NEW_VERSION",            "Launcher'ın yeni versionu mevcut.\nYeni Launcher'ı sitemizden indirip öyle deneyin!\nhttps://www.aionlegendary.com/Home/Download"},
+            {"LAUNCHER_VERSION_CHECK",          "Launcher versionu kontrol ediliyor..."},
         };
         private static Dictionary<string, string> TextEn = new Dictionary<string, string>
         {
@@ -67,6 +68,7 @@ namespace AionLegendaryLauncher.Source
             {"UPDATE_CANCELING",                "The update is being canceled."},
             {"FULL_FILE_CHECK",                 "Full File Check"},
             {"LAUNCHER_NEW_VERSION",            "New version of Launcher is available.\nDownload the New Launcher from our site and try it!\nhttps://www.aionlegendary.com/Home/Download"},
+            {"LAUNCHER_VERSION_CHECK",          "Launcher version checking..."},
         };
         public static string GetText(string Key, params object[] Arguments)
         {
