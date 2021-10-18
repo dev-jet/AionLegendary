@@ -15,6 +15,7 @@ namespace Updater
         private static Stopwatch stopWatch = new Stopwatch();
         public static readonly string ServerURL = "http://185.207.38.51/AionLegendary/";
         public static readonly string Launcher = "AionLegendary.exe";
+        public static readonly string Lnk = @"\AionLegendary.lnk";
         public static long _Size = 0;
         public static Updater Main;
         private static string _base = AppDomain.CurrentDomain.BaseDirectory;
@@ -80,6 +81,7 @@ namespace Updater
                 string file = Path.Combine(_base, Launcher).Replace(" ", String.Empty);
                 if (File.Exists(file))
                 {
+                    CreateShortcut();
                     Process.Start(file);
                     Application.Exit();
                 }
@@ -111,5 +113,25 @@ namespace Updater
             Main.labelStatus.Text = "File Downloading... " + Speed.ToString("0.00") + "Mb/s";
         }
 
+        public static void CreateShortcut()
+        {
+            string app = Path.Combine(_base, Launcher);
+            string shortcut_str = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Lnk;
+            if (!File.Exists(shortcut_str) && File.Exists(app))
+            {
+                try
+                {
+                    IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+                    IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcut_str);
+                    shortcut.Description = "Aion Legendary © 2021";
+                    shortcut.TargetPath = app;
+                    shortcut.Save();
+                }
+                catch
+                {
+
+                }
+            }
+        }
     }
 }

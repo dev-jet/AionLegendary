@@ -29,6 +29,7 @@ namespace AionLegendaryLauncher
 
         private void Main_Load(object sender, EventArgs e)
         {
+            LauncherSettings.SettingsLoad();
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Properties.Settings.Default._UILang);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default._UILang);
             webBrowser1.Navigate(Globals.iframeLink);

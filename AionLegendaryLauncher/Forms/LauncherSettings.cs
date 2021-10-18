@@ -11,7 +11,7 @@ namespace AionLegendaryLauncher.Forms
         bool move = false;
         int moveX = 0;
         int moveY = 0;
-        private static string path = Properties.Settings.Default._Path.Replace(" ", String.Empty);
+        public static string path = Properties.Settings.Default._Path.Replace(" ", String.Empty);
         private static int gametype = Properties.Settings.Default._GameType;
         private static string gamelang = Properties.Settings.Default._GameLang;
         private static string uilang = Properties.Settings.Default._UILang;
@@ -63,13 +63,16 @@ namespace AionLegendaryLauncher.Forms
                 }
             }
         }
-
-        private void LauncherSettings_Load(object sender, EventArgs e)
+        public static void SettingsLoad()
         {
             path = Properties.Settings.Default._Path.Replace(" ", String.Empty);
             gametype = Properties.Settings.Default._GameType;
             gamelang = Properties.Settings.Default._GameLang;
             uilang = Properties.Settings.Default._UILang;
+        }
+        private void LauncherSettings_Load(object sender, EventArgs e)
+        {
+            SettingsLoad();
             labelGamePathShow.Text = Properties.Settings.Default._Path.Replace(" ", String.Empty);
             radioButton32.Checked = Properties.Settings.Default._GameType == 32 ? true : false;
             radioButton64.Checked = Properties.Settings.Default._GameType == 64 ? true : false;

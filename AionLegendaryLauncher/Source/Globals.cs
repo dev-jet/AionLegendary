@@ -1,4 +1,5 @@
 ﻿
+using AionLegendaryLauncher.Forms;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +15,7 @@ namespace AionLegendaryLauncher.Source
         public static readonly string FullCheckList = "FullCheckList.txt";
         public static readonly string LauncherList = "Launcher.txt";
         public static readonly string Launcher = "AionLegendary.exe";
+        public static readonly string Lnk = @"\AionLegendary.lnk";
         public static readonly string Updater = "Updater.exe";
         private static bool IsStarting = false;
         public static Main mainForm;
@@ -121,6 +123,7 @@ namespace AionLegendaryLauncher.Source
                     startInfo.WorkingDirectory = Properties.Settings.Default._Path;
                     using (Process exeProcess = Process.Start(startInfo))
                     {
+                        MoveApp();
                         Application.Exit();
                     }
                 }
@@ -137,6 +140,47 @@ namespace AionLegendaryLauncher.Source
             {
                 mainForm.UnLockedButtons();
                 IsStarting = false;
+            }
+        }
+        public static void MoveApp()
+        {
+            string app = Path.Combine(LauncherSettings.path, Launcher);
+            if (Application.ExecutablePath != app)
+            {
+                try
+                {
+                    if (File.Exists(app))
+                    {
+                        File.Delete(app);
+                    }
+                    File.Move(Application.ExecutablePath, app);
+                    CreateShortcut();
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            }
+        }
+
+        public static void CreateShortcut()
+        {
+            string app = Path.Combine(LauncherSettings.path, Launcher);
+            string shortcut_str = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Lnk;
+            if (!File.Exists(shortcut_str) && File.Exists(app))
+            {
+                try 
+                {
+                    IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+                    IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcut_str);
+                    shortcut.Description = "Aion Legendary © 2021";
+                    shortcut.TargetPath = app;
+                    shortcut.Save();
+                }
+                catch
+                {
+                    
+                }
             }
         }
     }
